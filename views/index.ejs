@@ -11,7 +11,9 @@
 		<section class="todoapp">
 			<header class="header">
 				<h1>todos</h1>
-				<input class="new-todo" placeholder="What needs to be done?" autofocus>
+				<form action="/" method="post">
+					<input class="new-todo" name="title" placeholder="What needs to be done?" autofocus>
+				</form>
 			</header>
 			<% if (activeCount + completedCount > 0) { %>
 			<section class="main">

@@ -25,4 +25,20 @@ router.get('/', fetchTodos, function(req, res, next) {
   res.render('index');
 });
 
+router.post('/', function(req, res, next) {
+  req.body.title = req.body.title.trim();
+  next();
+}, function(req, res, next) {
+  if (req.body.title !== '') { return next(); }
+  return res.redirect('/');
+}, function(req, res, next) {
+  db.run('INSERT INTO todos (title, completed) VALUES (?, ?)', [
+    req.body.title,
+    req.body.completed == true ? 1 : null
+  ], function(err) {
+    if (err) { return next(err); }
+    return res.redirect('/');
+  });
+});
+
 module.exports = router;
