@@ -13,6 +13,8 @@
     "http-errors": "~1.6.3",
     "mkdirp": "^1.0.4",
     "morgan": "~1.9.1",
-    "sqlite3": "^5.0.2"
+    "sqlite3": "^5.0.2",
+    "todomvc-app-css": "^2.0.0",
+    "todomvc-common": "^1.0.0"
   }
 }
