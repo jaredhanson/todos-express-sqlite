@@ -21,7 +21,7 @@
 				<label for="toggle-all">Mark all as complete</label>
 				<ul class="todo-list">
 					<% todos.forEach(function(todo) { %>
-					<li class="completed">
+					<li <%- todo.completed ? 'class="completed"' : '' %>>
 						<div class="view">
 							<input class="toggle" type="checkbox" <%- todo.completed ? 'checked' : '' %>>
 							<label><%= todo.title %></label>
