@@ -1,7 +1,7 @@
-# Framework Name • [TodoMVC](http://todomvc.com)
+# Express • [TodoMVC](http://todomvc.com)
 
-> Official description of the framework (from its website)
-
+> Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+- _[Express - expressjs.com](https://expressjs.com/)_
 
 ## Resources
 
