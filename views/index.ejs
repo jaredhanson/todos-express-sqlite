@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Template • TodoMVC</title>
+		<title>Express • TodoMVC</title>
 		<link rel="stylesheet" href="css/base.css">
 		<link rel="stylesheet" href="css/index.css">
 	</head>
@@ -53,9 +53,7 @@
 			<% } %>
 			<% if (activeCount + completedCount > 0) { %>
 			<footer class="footer">
-				<!-- This should be `0 items left` by default -->
 				<span class="todo-count"><strong><%= activeCount %></strong> <%= pluralize('item', activeCount) %> left</span>
-				<!-- Remove this if you don't implement routing -->
 				<ul class="filters">
 					<li>
 						<a <%- !filter ? 'class="selected"' : '' %> href="/">All</a>
@@ -67,7 +65,6 @@
 						<a <%- filter == 'completed' ? 'class="selected"' : '' %> href="/completed">Completed</a>
 					</li>
 				</ul>
-				<!-- Hidden if no completed items are left ↓ -->
 				<% if (completedCount > 0) { %>
 				<form action="/clear-completed" method="post">
 					<button class="clear-completed">Clear completed</button>
@@ -81,10 +78,7 @@
 		</section>
 		<footer class="info">
 			<p>Double-click to edit a todo</p>
-			<!-- Remove the below line ↓ -->
-			<p>Template by <a href="http://sindresorhus.com">Sindre Sorhus</a></p>
-			<!-- Change this out with your name and url ↓ -->
-			<p>Created by <a href="http://todomvc.com">you</a></p>
+			<p>Created by <a href="https://www.jaredhanson.me">Jared Hanson</a></p>
 			<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
 		</footer>
 	</body>
