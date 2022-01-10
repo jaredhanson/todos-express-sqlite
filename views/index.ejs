@@ -13,6 +13,9 @@
 				<h1>todos</h1>
 				<form action="/" method="post">
 					<input class="new-todo" name="title" placeholder="What needs to be done?" autofocus>
+					<% if (filter) { %>
+					<input type="hidden" name="filter" value="<%= filter %>"/>
+					<% } %>
 				</form>
 			</header>
 			<% if (activeCount + completedCount > 0) { %>
@@ -29,6 +32,9 @@
 								<button class="destroy"></button>
 							</div>
 							<input class="edit" name="title" value="<%= todo.title %>" onkeyup="if (event.keyCode == 27) { this.setAttribute('data-esc', ''); this.closest('li').className = this.closest('li').className.replace('editing', ''); }" onblur="if (this.getAttribute('data-esc') !== null) { return this.removeAttribute('data-esc'); } this.form.submit();">
+							<% if (filter) { %>
+							<input type="hidden" name="filter" value="<%= filter %>"/>
+							<% } %>
 						</form>
 					</li>
 					<% }); %>
@@ -55,6 +61,9 @@
 				<% if (completedCount > 0) { %>
 				<form action="/clear-completed" method="post">
 					<button class="clear-completed">Clear completed</button>
+					<% if (filter) { %>
+					<input type="hidden" name="filter" value="<%= filter %>"/>
+					<% } %>
 				</form>
 				<% } %>
 			</footer>

@@ -43,14 +43,14 @@ router.post('/', function(req, res, next) {
   next();
 }, function(req, res, next) {
   if (req.body.title !== '') { return next(); }
-  return res.redirect('/');
+  return res.redirect('/' + (req.body.filter || ''));
 }, function(req, res, next) {
   db.run('INSERT INTO todos (title, completed) VALUES (?, ?)', [
     req.body.title,
     req.body.completed == true ? 1 : null
   ], function(err) {
     if (err) { return next(err); }
-    return res.redirect('/');
+    return res.redirect('/' + (req.body.filter || ''));
   });
 });
 
@@ -63,7 +63,7 @@ router.post('/:id(\\d+)', function(req, res, next) {
     req.params.id
   ], function(err) {
     if (err) { return next(err); }
-    return res.redirect('/');
+    return res.redirect('/' + (req.body.filter || ''));
   });
 }, function(req, res, next) {
   db.run('UPDATE todos SET title = ?, completed = ? WHERE rowid = ?', [
@@ -72,7 +72,7 @@ router.post('/:id(\\d+)', function(req, res, next) {
     req.params.id
   ], function(err) {
     if (err) { return next(err); }
-    return res.redirect('/');
+    return res.redirect('/' + (req.body.filter || ''));
   });
 });
 
@@ -81,7 +81,7 @@ router.post('/clear-completed', function(req, res, next) {
     1
   ], function(err) {
     if (err) { return next(err); }
-    return res.redirect('/');
+    return res.redirect('/' + (req.body.filter || ''));
   });
 });
 
