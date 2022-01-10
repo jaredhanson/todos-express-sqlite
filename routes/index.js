@@ -76,6 +76,15 @@ router.post('/:id(\\d+)', function(req, res, next) {
   });
 });
 
+router.post('/toggle-all', function(req, res, next) {
+  db.run('UPDATE todos SET completed = ?', [
+    req.body.completed !== undefined ? 1 : null
+  ], function(err) {
+    if (err) { return next(err); }
+    return res.redirect('/' + (req.body.filter || ''));
+  });
+});
+
 router.post('/clear-completed', function(req, res, next) {
   db.run('DELETE FROM todos WHERE completed = ?', [
     1
