@@ -76,4 +76,13 @@ router.post('/:id(\\d+)', function(req, res, next) {
   });
 });
 
+router.post('/clear-completed', function(req, res, next) {
+  db.run('DELETE FROM todos WHERE completed = ?', [
+    1
+  ], function(err) {
+    if (err) { return next(err); }
+    return res.redirect('/');
+  });
+});
+
 module.exports = router;
