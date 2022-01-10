@@ -6,24 +6,15 @@
 
 ## Resources
 
-- [Website]()
-- [Documentation]()
-- [Used by]()
-- [Blog]()
-- [FAQ]()
-
-### Articles
-
-- [Interesting article]()
+- [Website](https://expressjs.com/)
+- [API Reference](https://expressjs.com/en/4x/api.html)
 
 ### Support
 
-- [Stack Overflow](http://stackoverflow.com/questions/tagged/__)
-- [Google Groups]()
-- [Twitter](http://twitter.com/__)
-- [Google+]()
+- [Stack Overflow](https://stackoverflow.com/questions/tagged/express)
+- [Google Groups](https://groups.google.com/g/express-js)
 
-*Let us [know](https://github.com/tastejs/todomvc/issues) if you discover anything worth sharing.*
+*Let us [know](https://github.com/jaredhanson/todos-express-sqlite/issues) if you discover anything worth sharing.*
 
 
 ## Implementation
