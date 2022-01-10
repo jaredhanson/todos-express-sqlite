@@ -1,7 +1,7 @@
 # Express • [TodoMVC](http://todomvc.com)
 
 > Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
-\- _[Express - expressjs.com](https://expressjs.com/)_
+&#8211; _[Express - expressjs.com](https://expressjs.com/)_
 
 ## Resources
 
