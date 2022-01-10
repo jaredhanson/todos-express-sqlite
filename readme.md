@@ -2,9 +2,7 @@
 
 > Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 
-&ndash; _[Express - expressjs.com](https://expressjs.com/)_
-
-&#8211; Test 2
+&ndash; _[Express](https://expressjs.com/)_
 
 ## Resources
 
