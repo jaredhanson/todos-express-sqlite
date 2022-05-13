@@ -25,13 +25,11 @@ such as `localStorage`.  Instead, it illustrates how to build a todo app using
 a backend for application logic and persistence, along with HTML forms for
 interaction.
 
-This app illustrates how to build a todo app using [Node.js](https://nodejs.org/)
-along with the [Express](https://expressjs.com/) web framework.  Data is
-persisted to a [SQLite](https://www.sqlite.org/) database.
-
-[EJS](https://ejs.co/) templates are used to generate HTML, which is styled
-using vanilla CSS.  HTML forms are used to modify data, rather than an HTTP
-API.  That being said, the forms serialize data in a format inspired by
+This app is built using [Node.js](https://nodejs.org/) along with the [Express](https://expressjs.com/)
+web framework.  Data is persisted to a [SQLite](https://www.sqlite.org/)
+database.  HTML pages are rendered using [EJS](https://ejs.co/) templates, and
+are styled using vanilla CSS.  HTML forms are used to modify data, rather than a
+RESTful API.  That being said, the forms serialize data in a format inspired by
 [Todo-Backend](https://todobackend.com/).
 
 To run this app, clone the repository and install dependencies:
